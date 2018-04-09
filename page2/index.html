@@ -35,12 +35,17 @@
 </head>
 
 
-  <body class="index home">
+  <body class="index">
 
     <div id="sidebar">
   <header>
     <h1 class="site-title">
       <a href="/">
+        
+          <span class="back-arrow icon"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 0h24v24H0z" fill="none"/>
+  <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+</svg></span>
         
         Hydeout
       </a>
@@ -49,7 +54,7 @@
   </header>
   <nav id="sidebar-nav-links">
   
-    <a class="home-link  active"
+    <a class="home-link "
         href="/">Home</a>
   
   
@@ -247,6 +252,13 @@
     <main class="container">
       <div class="content">
   
+<div class="pagination">
+  <a class="pagination-item newer"
+     href="/">
+    Newer
+  </a>
+</div>
+
 
 
   
@@ -254,100 +266,29 @@
   
   <article class="post-body">
     <h2 class="post-title">
-      <a href="/2017/06/01/hello-hydeout.html">
-        Hello Hydeout
+      <a href="/layout/2012/02/04/layout-excerpt-defined.html">
+        Layout: Excerpt (Defined)
       </a>
     </h2>
     <div class="post-meta">
-  <span class="post-date">01 Jun 2017</span>
+  <span class="post-date">04 Feb 2012</span>
   <span class="post-categories">
+    
+      &bull;
+
+      
+      
+      
+
+      
+        Layout
+      
     
   </span>
 </div>
 
     
-      <p>Hydeout updates the original <a href="https://github.com/poole/hyde">Hyde</a>
-theme for <a href="http://jekyllrb.com">Jekyll</a> 3.x and adds new functionality.</p>
-
-<h3 id="keep-it-simple">Keep It Simple</h3>
-
-<p>In keeping with the original Hyde theme, Hydeout aims to keep the overall
-design lightweight and plugin-free. JavaScript is currently limited only
-to Disqus and Google Analytics (and is only loaded if you provide configuration
-variables).</p>
-
-<p>Hydeout makes heavy use of Flexbox in its CSS. If Flexbox is not available,
-the CSS degrades into a single column layout.</p>
-
-<h3 id="customization">Customization</h3>
-
-<p>Hydeout replaces Hyde’s class-based theming with the use
-of the following SASS variables:</p>
-
-<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$sidebar-bg-color</span><span class="p">:</span> <span class="mh">#202020</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
-<span class="nv">$sidebar-sticky</span><span class="p">:</span> <span class="bp">true</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
-<span class="nv">$layout-reverse</span><span class="p">:</span> <span class="bp">false</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
-<span class="nv">$link-color</span><span class="p">:</span> <span class="mh">#268bd2</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>To override these variables, create your own <code class="highlighter-rouge">assets/css/main.scss</code> file.
-Define your own variables, then import in Hydeout’s SCSS, like so:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-# Jekyll needs front matter for SCSS files
----
-
-$sidebar-bg-color: #ac4142;
-$link-color: #ac4142;
-$sidebar-sticky: false;
-@import "hydeout";
-</code></pre></div></div>
-
-<p>See the <a href="_sass/hydeout/_variables.scss">_variables</a> file for other variables
-you can override.</p>
-
-<p>You can also insert custom head tags (e.g. to load your own stylesheets) by
-defining your own <code class="highlighter-rouge">_includes/custom-head.html</code> or insert tags at the end
-of the body (e.g. for custom JS) by defining your own
-<code class="highlighter-rouge">_includes/custom-foot.html</code>.</p>
-
-<h3 id="new-features">New Features</h3>
-
-<ul>
-  <li>
-    <p>Hydeout also adds a new tags page (accessible in the sidebar) and a new
-“category” layout for dedicated category pages.</p>
-  </li>
-  <li>
-    <p>Category pages are automatically added to the sidebar. All other pages
-must have <code class="highlighter-rouge">sidebar_link: true</code> in their front matter to show up in
-the sidebar.</p>
-  </li>
-  <li>
-    <p>A simple redirect-to-Google search is available. If you want to use
-Google Custom Search or Algolia or something with more involved,
-override the <code class="highlighter-rouge">search.html</code>.</p>
-  </li>
-  <li>
-    <p>Disqus integration is ready out of the box. Just add the following to
-your config file:</p>
-
-    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">disqus</span><span class="pi">:</span>
-  <span class="na">shortname</span><span class="pi">:</span> <span class="s">my-disqus-shortname</span>
-</code></pre></div>    </div>
-
-    <p>If you don’t want Disqus or want to use something else, override
-<code class="highlighter-rouge">comments.html</code>.</p>
-  </li>
-  <li>
-    <p>For Google Analytics support, define a <code class="highlighter-rouge">google_analytics</code> variable with
-your property ID in your config file.</p>
-  </li>
-</ul>
-
-<p>There’s also a bunch of minor tweaks and adjustments throughout the
-theme. Hope this works for you!</p>
-
+      This is a user-defined post excerpt. It should be displayed in place of the auto-generated excerpt or post content on index pages.
     
 
     
@@ -361,19 +302,31 @@ theme. Hope this works for you!</p>
   
   <article class="post-body">
     <h2 class="post-title">
-      <a href="/2013/12/28/introducing-hyde.html">
-        Introducing Hyde
+      <a href="/layout/2012/02/03/layout-excerpt-generated.html">
+        Layout: Excerpt (Generated with Separator Tag)
       </a>
     </h2>
     <div class="post-meta">
-  <span class="post-date">28 Dec 2013</span>
+  <span class="post-date">03 Feb 2012</span>
   <span class="post-categories">
+    
+      &bull;
+
+      
+      
+      
+
+      
+        Layout
+      
     
   </span>
 </div>
 
     
-      <p>Hyde is a brazen two-column <a href="http://jekyllrb.com">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. It’s based on <a href="http://getpoole.com">Poole</a>, the Jekyll butler.</p>
+      <p>This is the post content. Archive-index pages should display an <a href="https://jekyllrb.com/docs/posts/#post-excerpts">auto-generated excerpt</a> of all the content preceding the <code class="highlighter-rouge">excerpt_separator</code>, as defined in the YAML Front Matter or globally in <code class="highlighter-rouge">_config.yml</code>.</p>
+
+<p>Be sure to test the formatting of the auto-generated excerpt, to ensure that it doesn’t create any layout problems.</p>
 
 
     
@@ -384,28 +337,38 @@ theme. Hope this works for you!</p>
       
 
       
-        <a href="/2013/12/28/introducing-hyde.html">More &hellip;</a>
+        <a href="/layout/2012/02/03/layout-excerpt-generated.html">More &hellip;</a>
       
     
   </article>
   
   <article class="post-body">
     <h2 class="post-title">
-      <a href="/2012/02/07/example-content.html">
-        Example content
+      <a href="/markup/2012/01/31/markup-title-with-special-characters.html">
+        Markup: Title with Special&nbsp;---&nbsp;Characters
       </a>
     </h2>
     <div class="post-meta">
-  <span class="post-date">07 Feb 2012</span>
+  <span class="post-date">31 Jan 2012</span>
   <span class="post-categories">
+    
+      &bull;
+
+      
+      
+      
+
+      
+        <a href="/category/markup.html">
+          Markup
+        </a>
+      
     
   </span>
 </div>
 
     
-      <div class="message">
-  Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
-</div>
+      <p>Putting special characters in the title should have no adverse effect on the layout or functionality.</p>
 
 
     
@@ -416,26 +379,38 @@ theme. Hope this works for you!</p>
       
 
       
-        <a href="/2012/02/07/example-content.html">More &hellip;</a>
+        <a href="/markup/2012/01/31/markup-title-with-special-characters.html">More &hellip;</a>
       
     
   </article>
   
   <article class="post-body">
     <h2 class="post-title">
-      <a href="/2012/02/06/whats-jekyll.html">
-        What's Jekyll?
+      <a href="/markup/2012/01/30/markup-title-with-markup.html">
+        Markup: Title *with* **Markdown**
       </a>
     </h2>
     <div class="post-meta">
-  <span class="post-date">06 Feb 2012</span>
+  <span class="post-date">30 Jan 2012</span>
   <span class="post-categories">
+    
+      &bull;
+
+      
+      
+      
+
+      
+        <a href="/category/markup.html">
+          Markup
+        </a>
+      
     
   </span>
 </div>
 
     
-      <p><a href="http://jekyllrb.com">Jekyll</a> is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From <a href="https://github.com/mojombo/jekyll/blob/master/README.markdown">the project’s readme</a>:</p>
+      <p>Using Markdown in the title should have no adverse effect on the layout or functionality.</p>
 
 
     
@@ -446,26 +421,38 @@ theme. Hope this works for you!</p>
       
 
       
-        <a href="/2012/02/06/whats-jekyll.html">More &hellip;</a>
+        <a href="/markup/2012/01/30/markup-title-with-markup.html">More &hellip;</a>
       
     
   </article>
   
   <article class="post-body">
     <h2 class="post-title">
-      <a href="/2012/02/05/markup-syntax-highlighting.html">
-        Markup: Syntax Highlighting
+      <a href="/markup/2012/01/29/markup-text-readability.html">
+        Markup: Text Readability Test
       </a>
     </h2>
     <div class="post-meta">
-  <span class="post-date">05 Feb 2012</span>
+  <span class="post-date">29 Jan 2012</span>
   <span class="post-categories">
+    
+      &bull;
+
+      
+      
+      
+
+      
+        <a href="/category/markup.html">
+          Markup
+        </a>
+      
     
   </span>
 </div>
 
     
-      Post displaying the various ways one can highlight code blocks with Jekyll. Some options include standard Markdown, GitHub Flavored Markdown, and Jekyll's `{% highlight %}` tag.
+      A large amount of sample text to test readability of a text heavy page.
     
 
     
@@ -474,7 +461,7 @@ theme. Hope this works for you!</p>
       
 
       
-        <a href="/2012/02/05/markup-syntax-highlighting.html">More &hellip;</a>
+        <a href="/markup/2012/01/29/markup-text-readability.html">More &hellip;</a>
       
     
   </article>
@@ -483,7 +470,7 @@ theme. Hope this works for you!</p>
   
 <div class="pagination">
   <a class="pagination-item older"
-     href="/page2">
+     href="/page3">
     Older
   </a>
 </div>

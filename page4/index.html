@@ -35,12 +35,17 @@
 </head>
 
 
-  <body class="index home">
+  <body class="index">
 
     <div id="sidebar">
   <header>
     <h1 class="site-title">
       <a href="/">
+        
+          <span class="back-arrow icon"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 0h24v24H0z" fill="none"/>
+  <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+</svg></span>
         
         Hydeout
       </a>
@@ -49,7 +54,7 @@
   </header>
   <nav id="sidebar-nav-links">
   
-    <a class="home-link  active"
+    <a class="home-link "
         href="/">Home</a>
   
   
@@ -247,6 +252,13 @@
     <main class="container">
       <div class="content">
   
+<div class="pagination">
+  <a class="pagination-item newer"
+     href="/page3">
+    Newer
+  </a>
+</div>
+
 
 
   
@@ -254,99 +266,71 @@
   
   <article class="post-body">
     <h2 class="post-title">
-      <a href="/2017/06/01/hello-hydeout.html">
-        Hello Hydeout
+      <a href="/post%20formats/2010/01/07/post-modified.html">
+        Post: Modified Date
       </a>
     </h2>
     <div class="post-meta">
-  <span class="post-date">01 Jun 2017</span>
+  <span class="post-date">07 Jan 2010</span>
   <span class="post-categories">
+    
+      &bull;
+
+      
+      
+      
+
+      
+        Post Formats
+      
     
   </span>
 </div>
 
     
-      <p>Hydeout updates the original <a href="https://github.com/poole/hyde">Hyde</a>
-theme for <a href="http://jekyllrb.com">Jekyll</a> 3.x and adds new functionality.</p>
+      <p>This post has been updated and should show a modified date if <code class="highlighter-rouge">last_modified_at</code> is used in the layout.</p>
 
-<h3 id="keep-it-simple">Keep It Simple</h3>
 
-<p>In keeping with the original Hyde theme, Hydeout aims to keep the overall
-design lightweight and plugin-free. JavaScript is currently limited only
-to Disqus and Google Analytics (and is only loaded if you provide configuration
-variables).</p>
+    
 
-<p>Hydeout makes heavy use of Flexbox in its CSS. If Flexbox is not available,
-the CSS degrades into a single column layout.</p>
+    
+      
+      
+      
 
-<h3 id="customization">Customization</h3>
+      
+        <a href="/post%20formats/2010/01/07/post-modified.html">More &hellip;</a>
+      
+    
+  </article>
+  
+  <article class="post-body">
+    <h2 class="post-title">
+      <a href="/edge%20case/2009/10/05/edge-case-very-long-title.html">
+        Suspicio? Bene ... tunc ibimus? Quis uh ... CONEXUS locus his diebus? Quisque semper aliquid videtur, in volutpat mauris. Nolo enim dicere. Vobis neque ab aliis. Ego feci memetipsum explicans. Gus mortuus est. Lorem opus habeo. Jackson Isai? Tu quoque ... A te quidem a ante. Vos scitis quod blinking res Ive 'been vocans super vos? Et conteram illud, et conteram hoc. Maledicant druggie excors. Iam hoc tu facere conatus sum ad te in omni tempore? Ludum mutavit. Verbum est ex. Et ... sunt occid
+      </a>
+    </h2>
+    <div class="post-meta">
+  <span class="post-date">05 Oct 2009</span>
+  <span class="post-categories">
+    
+      &bull;
 
-<p>Hydeout replaces Hyde’s class-based theming with the use
-of the following SASS variables:</p>
+      
+      
+      
 
-<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$sidebar-bg-color</span><span class="p">:</span> <span class="mh">#202020</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
-<span class="nv">$sidebar-sticky</span><span class="p">:</span> <span class="bp">true</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
-<span class="nv">$layout-reverse</span><span class="p">:</span> <span class="bp">false</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
-<span class="nv">$link-color</span><span class="p">:</span> <span class="mh">#268bd2</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
-</code></pre></div></div>
+      
+        <a href="/category/edge-case.html">
+          Edge Case
+        </a>
+      
+    
+  </span>
+</div>
 
-<p>To override these variables, create your own <code class="highlighter-rouge">assets/css/main.scss</code> file.
-Define your own variables, then import in Hydeout’s SCSS, like so:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-# Jekyll needs front matter for SCSS files
----
-
-$sidebar-bg-color: #ac4142;
-$link-color: #ac4142;
-$sidebar-sticky: false;
-@import "hydeout";
-</code></pre></div></div>
-
-<p>See the <a href="_sass/hydeout/_variables.scss">_variables</a> file for other variables
-you can override.</p>
-
-<p>You can also insert custom head tags (e.g. to load your own stylesheets) by
-defining your own <code class="highlighter-rouge">_includes/custom-head.html</code> or insert tags at the end
-of the body (e.g. for custom JS) by defining your own
-<code class="highlighter-rouge">_includes/custom-foot.html</code>.</p>
-
-<h3 id="new-features">New Features</h3>
-
-<ul>
-  <li>
-    <p>Hydeout also adds a new tags page (accessible in the sidebar) and a new
-“category” layout for dedicated category pages.</p>
-  </li>
-  <li>
-    <p>Category pages are automatically added to the sidebar. All other pages
-must have <code class="highlighter-rouge">sidebar_link: true</code> in their front matter to show up in
-the sidebar.</p>
-  </li>
-  <li>
-    <p>A simple redirect-to-Google search is available. If you want to use
-Google Custom Search or Algolia or something with more involved,
-override the <code class="highlighter-rouge">search.html</code>.</p>
-  </li>
-  <li>
-    <p>Disqus integration is ready out of the box. Just add the following to
-your config file:</p>
-
-    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">disqus</span><span class="pi">:</span>
-  <span class="na">shortname</span><span class="pi">:</span> <span class="s">my-disqus-shortname</span>
-</code></pre></div>    </div>
-
-    <p>If you don’t want Disqus or want to use something else, override
-<code class="highlighter-rouge">comments.html</code>.</p>
-  </li>
-  <li>
-    <p>For Google Analytics support, define a <code class="highlighter-rouge">google_analytics</code> variable with
-your property ID in your config file.</p>
-  </li>
-</ul>
-
-<p>There’s also a bunch of minor tweaks and adjustments throughout the
-theme. Hope this works for you!</p>
+    
+      <p>Check for long titles and how they might break layouts.</p>
 
     
 
@@ -361,19 +345,31 @@ theme. Hope this works for you!</p>
   
   <article class="post-body">
     <h2 class="post-title">
-      <a href="/2013/12/28/introducing-hyde.html">
-        Introducing Hyde
+      <a href="/edge%20case/2009/10/05/edge-case-title-should-not-overflow-the-content-area.html">
+        Antidisestablishmentarianism
       </a>
     </h2>
     <div class="post-meta">
-  <span class="post-date">28 Dec 2013</span>
+  <span class="post-date">05 Oct 2009</span>
   <span class="post-categories">
+    
+      &bull;
+
+      
+      
+      
+
+      
+        <a href="/category/edge-case.html">
+          Edge Case
+        </a>
+      
     
   </span>
 </div>
 
     
-      <p>Hyde is a brazen two-column <a href="http://jekyllrb.com">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. It’s based on <a href="http://getpoole.com">Poole</a>, the Jekyll butler.</p>
+      <p>This post title has a long word that could potentially overflow the content area.</p>
 
 
     
@@ -384,28 +380,38 @@ theme. Hope this works for you!</p>
       
 
       
-        <a href="/2013/12/28/introducing-hyde.html">More &hellip;</a>
+        <a href="/edge%20case/2009/10/05/edge-case-title-should-not-overflow-the-content-area.html">More &hellip;</a>
       
     
   </article>
   
   <article class="post-body">
     <h2 class="post-title">
-      <a href="/2012/02/07/example-content.html">
-        Example content
+      <a href="/edge%20case/2009/09/05/edge-case-no-yaml-title.html">
+        Edge Case No Yaml Title
       </a>
     </h2>
     <div class="post-meta">
-  <span class="post-date">07 Feb 2012</span>
+  <span class="post-date">05 Sep 2009</span>
   <span class="post-categories">
+    
+      &bull;
+
+      
+      
+      
+
+      
+        <a href="/category/edge-case.html">
+          Edge Case
+        </a>
+      
     
   </span>
 </div>
 
     
-      <div class="message">
-  Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
-</div>
+      <p>This post has no title specified in the YAML Front Matter. Jekyll should auto-generate a title from the filename.</p>
 
 
     
@@ -416,28 +422,38 @@ theme. Hope this works for you!</p>
       
 
       
-        <a href="/2012/02/07/example-content.html">More &hellip;</a>
+        <a href="/edge%20case/2009/09/05/edge-case-no-yaml-title.html">More &hellip;</a>
       
     
   </article>
   
   <article class="post-body">
     <h2 class="post-title">
-      <a href="/2012/02/06/whats-jekyll.html">
-        What's Jekyll?
+      <a href="/edge%20case/2009/08/06/edge-case-no-body-content.html">
+        Edge Case: No Body Content
       </a>
     </h2>
     <div class="post-meta">
-  <span class="post-date">06 Feb 2012</span>
+  <span class="post-date">06 Aug 2009</span>
   <span class="post-categories">
+    
+      &bull;
+
+      
+      
+      
+
+      
+        <a href="/category/edge-case.html">
+          Edge Case
+        </a>
+      
     
   </span>
 </div>
 
     
-      <p><a href="http://jekyllrb.com">Jekyll</a> is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From <a href="https://github.com/mojombo/jekyll/blob/master/README.markdown">the project’s readme</a>:</p>
-
-
+      This post has no body content and should be blank on the post's page.
     
 
     
@@ -446,35 +462,7 @@ theme. Hope this works for you!</p>
       
 
       
-        <a href="/2012/02/06/whats-jekyll.html">More &hellip;</a>
-      
-    
-  </article>
-  
-  <article class="post-body">
-    <h2 class="post-title">
-      <a href="/2012/02/05/markup-syntax-highlighting.html">
-        Markup: Syntax Highlighting
-      </a>
-    </h2>
-    <div class="post-meta">
-  <span class="post-date">05 Feb 2012</span>
-  <span class="post-categories">
-    
-  </span>
-</div>
-
-    
-      Post displaying the various ways one can highlight code blocks with Jekyll. Some options include standard Markdown, GitHub Flavored Markdown, and Jekyll's `{% highlight %}` tag.
-    
-
-    
-      
-      
-      
-
-      
-        <a href="/2012/02/05/markup-syntax-highlighting.html">More &hellip;</a>
+        <a href="/edge%20case/2009/08/06/edge-case-no-body-content.html">More &hellip;</a>
       
     
   </article>
@@ -483,7 +471,7 @@ theme. Hope this works for you!</p>
   
 <div class="pagination">
   <a class="pagination-item older"
-     href="/page2">
+     href="/page5">
     Older
   </a>
 </div>
