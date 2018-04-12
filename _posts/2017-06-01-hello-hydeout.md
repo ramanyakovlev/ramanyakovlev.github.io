@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hello Hydeout
+title: "Hello Hydeout"
 excerpt_separator:  "<!--more-->"
 categories:
   - Layout
