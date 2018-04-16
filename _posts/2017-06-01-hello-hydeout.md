@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hello Hydeout"
-excerpt_separator:  "<!--more-->"
+excerpt_separator: "<!--more-->"
 categories:
   - Layout
 tags:
