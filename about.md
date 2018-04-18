@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: Ваш покорный слуга
 sidebar_link: true
 ---
 

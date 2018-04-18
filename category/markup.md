@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Markup
+title: Раздел трали-вали
 ---
 
 Another sample category page.
