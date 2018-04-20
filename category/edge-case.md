@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Раздел тили-тили
+title: Об авторе...
 ---
 
 Sample category page. You need to create a page for each category.

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Ваш покорный слуга
+title: Об этом блоге...
 sidebar_link: true
 ---
 
